@@ -47,6 +47,8 @@ int main(int argc, const char * argv[]) {
             
             // print as a c string
             printf("Your string is %s\n", trimmedChars);
+            
+            // Read the string only till the newline (exlude the newline)
             printf("The memory location is %p\n",trimmedChars);
             
             // convert char array to an NSString object
@@ -55,6 +57,21 @@ int main(int argc, const char * argv[]) {
             // print NSString object
             NSLog(@"Input was: %@", inputString);
             NSLog(@"Located at %p",inputString);
+            
+            NSString* outputString;
+            
+            switch (operationNumber) {
+                case 1:
+                    //Convert to upper case.
+                    outputString = [inputString uppercaseString];
+                    break;
+                default:
+                    outputString = @"I didn't implement that operation yet!";
+            }
+            
+            // print NSString object
+            NSLog(@"Output of operation is: %@", outputString);
+            NSLog(@"Located at %p",outputString);
             
             
             //This is a long long string more than 255 chars. Let's see if this is broken up. This is a long long string more than 255 chars. Let's see if this is broken up. This is a long long string more than 255 chars. Let's see if this is broken up. This is a long long string more than 255 chars. Let's see if this is broken up. This is a long long string more than 255 chars. Let's see if this is broken up. This is a long long string more than 255 chars. Let's see if this is broken up.
