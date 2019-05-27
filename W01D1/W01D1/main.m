@@ -65,6 +65,11 @@ int main(int argc, const char * argv[]) {
                     //Convert to upper case.
                     outputString = [inputString uppercaseString];
                     break;
+                    
+                case 2:
+                    outputString = [inputString lowercaseString];
+                    break;
+    
                 default:
                     outputString = @"I didn't implement that operation yet!";
             }
