@@ -69,7 +69,18 @@ int main(int argc, const char * argv[]) {
                 case 2:
                     outputString = [inputString lowercaseString];
                     break;
-    
+                
+                case 3:
+                {
+                    NSInteger outputNumber = [inputString integerValue];
+                    if (outputNumber == 0 && [inputString isNotEqualTo:@"0"]) {
+                        outputString = @"Conversion to number failed!";
+                        break;
+                    }
+                    outputString = @"Conversion succeeded!";
+                    break;
+                }
+
                 default:
                     outputString = @"I didn't implement that operation yet!";
             }
