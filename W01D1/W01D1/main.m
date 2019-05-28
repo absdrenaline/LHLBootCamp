@@ -92,7 +92,9 @@ int main(int argc, const char * argv[]) {
                     else
                         outputString = inputString;
                     break;
-              
+                case 6:
+                    outputString = [inputString stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+                    break;
                 default:
                     outputString = @"I didn't implement that operation yet!";
             }
