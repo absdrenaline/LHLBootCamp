@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
+
 long captureIntFromConsole(const char* prompt) {
     long number;
     char nextChar;
@@ -52,51 +53,52 @@ int main(int argc, const char * argv[]) {
             printf("The memory location is %p\n",trimmedChars);
             
             // convert char array to an NSString object
-            NSString *inputString = [NSString stringWithUTF8String:trimmedChars];
+            NSMutableString *inputString = [NSMutableString stringWithUTF8String:trimmedChars];
             
             // print NSString object
             NSLog(@"Input was: %@", inputString);
             NSLog(@"Located at %p",inputString);
             
-            NSString* outputString;
+            NSMutableString* outputString;
             
             switch (operationNumber) {
                 case 1:
                     //Convert to upper case.
-                    outputString = [inputString uppercaseString];
+                    outputString = [NSMutableString stringWithString:[inputString uppercaseString]];
                     break;
                     
                 case 2:
-                    outputString = [inputString lowercaseString];
+                    outputString = [NSMutableString stringWithString:[inputString lowercaseString]];
                     break;
                 
                 case 3:
                 {
                     NSInteger outputNumber = [inputString integerValue];
                     if (outputNumber == 0 && [inputString isNotEqualTo:@"0"]) {
-                        outputString = @"Conversion to number failed!";
+                        outputString = [NSMutableString stringWithString:@"Conversion to number failed!"];
                         break;
                     }
-                    outputString = @"Conversion succeeded!";
+                    outputString = [NSMutableString stringWithString:@"Conversion succeeded!"];
                     break;
                 }
                 case 4:
-                    outputString = [inputString stringByAppendingString:@", eh?"];
+                    outputString = [NSMutableString stringWithString:[inputString stringByAppendingString:@", eh?"]];
                     break;
                 
                 case 5:
                     if([inputString hasSuffix:@"?"])
-                        outputString = @"I don't know";
+                        outputString = [NSMutableString stringWithString:@"I don't know"];
                     else if([inputString hasSuffix:@"!"])
-                        outputString = @"Whoa, calm down!";
+                        outputString = [NSMutableString stringWithString:@"Whoa, calm down!"];
                     else
                         outputString = inputString;
                     break;
                 case 6:
-                    outputString = [inputString stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+                    outputString = [NSMutableString stringWithString:
+                                    [inputString stringByReplacingOccurrencesOfString:@" " withString:@"-"]];
                     break;
                 default:
-                    outputString = @"I didn't implement that operation yet!";
+                    outputString = [NSMutableString stringWithString:@"I didn't implement that operation yet!"];
             }
             
             // print NSString object
