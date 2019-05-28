@@ -80,6 +80,9 @@ int main(int argc, const char * argv[]) {
                     outputString = @"Conversion succeeded!";
                     break;
                 }
+                case 4:
+                    outputString = [inputString stringByAppendingString:@", eh?"];
+                    break;
 
                 default:
                     outputString = @"I didn't implement that operation yet!";
