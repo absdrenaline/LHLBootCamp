@@ -7,27 +7,47 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "AdditionQuestion.h"
+#include "InputHandler.h"
+#include "ScoreKeeper.h"
 
-static const int kMaxInputSize = 5;
+static const uint kMaxInputSize = 5;
+static const uint kMinGameNumber = 10;
+static const uint kMaxGameNumber = 100;
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        while (YES) {
+        
+        ScoreKeeper *scoreKeeper = [ScoreKeeper new];
+        BOOL gameOn = YES;
+        
+        while (gameOn) {
             
-            printf("Enter a value: ");
+            AdditionQuestion* additionQuestion = [[AdditionQuestion alloc]
+                                                  initWithNumberRange:kMinGameNumber
+                                                  MaxNumber:kMaxGameNumber];
             
-            //Capture a number from the user;
-            char input[kMaxInputSize];
-            fgets(input,kMaxInputSize,stdin);
+            NSLog(@"%@",[additionQuestion question]);
+
+            InputHandler* inputHandler = [[InputHandler alloc] initWithBufferSize:kMaxInputSize];
+            [inputHandler captureInputFromConsole];
             
-            NSString* inputString = [NSString stringWithCString:input encoding:NSUTF8StringEncoding];
+            if (inputHandler.isQuit) {
+                gameOn = NO;
+                continue;
+            }
             
-            //Intialize a charset to clean out the user input
-            NSCharacterSet *trimCharacterSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-            NSString *cleanInputString = [inputString stringByTrimmingCharactersInSet:trimCharacterSet];
-            
-            NSLog(@"You input: %@",cleanInputString);
-            
+            if ([inputHandler.inputString isEqualToString: additionQuestion.answer])
+            {
+                NSLog(@"Right!");
+                [scoreKeeper registerWin];
+                
+            } else {
+                NSLog(@"Wrong!");
+                [scoreKeeper registerLoss];
+            }
+            NSLog(@"%@",scoreKeeper);
             
         }
     }
