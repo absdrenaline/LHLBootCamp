@@ -83,7 +83,16 @@ int main(int argc, const char * argv[]) {
                 case 4:
                     outputString = [inputString stringByAppendingString:@", eh?"];
                     break;
-
+                
+                case 5:
+                    if([inputString hasSuffix:@"?"])
+                        outputString = @"I don't know";
+                    else if([inputString hasSuffix:@"!"])
+                        outputString = @"Whoa, calm down!";
+                    else
+                        outputString = inputString;
+                    break;
+              
                 default:
                     outputString = @"I didn't implement that operation yet!";
             }
