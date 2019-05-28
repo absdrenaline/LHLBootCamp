@@ -32,9 +32,9 @@ int main(int argc, const char * argv[]) {
         while (YES) {
             
             long operationNumber;
-            operationNumber = captureIntFromConsole("Enter the number between 1 to 6 to perform an operation on a string: ");
-            if (operationNumber < 1 || operationNumber > 6) {
-                printf("I only understand operations from 1 - 6. Try again!\n");
+            operationNumber = captureIntFromConsole("Enter the number between 1 to 9 to perform an operation on a string: ");
+            if (operationNumber < 1 || operationNumber > 9) {
+                printf("I only understand operations from 1 - 9. Try again!\n");
                 continue;
             }
            
@@ -97,6 +97,40 @@ int main(int argc, const char * argv[]) {
                     outputString = [NSMutableString stringWithString:
                                     [inputString stringByReplacingOccurrencesOfString:@" " withString:@"-"]];
                     break;
+                case 7:
+                {
+                    //Count the alphanumeric letters in the string
+                    NSCharacterSet* letterCharacterSet = [NSCharacterSet letterCharacterSet];
+                    long lenInputString = [[inputString componentsSeparatedByCharactersInSet:letterCharacterSet] count] - 1;
+                    outputString = [NSMutableString stringWithFormat:@"The count of letters in input string is %lu",lenInputString];
+                    break;
+                }
+                case 8:
+                {
+                    //Remove all puntuations
+                    NSCharacterSet* punctuationCharacterSet = [NSCharacterSet punctuationCharacterSet];
+                    NSString* stringWithoutPuntuation = [[inputString componentsSeparatedByCharactersInSet:punctuationCharacterSet] componentsJoinedByString:@""];
+                    outputString = [NSMutableString stringWithString:stringWithoutPuntuation];
+                    break;
+                }
+                case 9:
+                {
+                    //Replace all letters with emojis
+                    //The regex pattern is dervived from Apple's documentation for /w
+                    NSRegularExpression *letterMatchExpression = [NSRegularExpression
+                                                                  regularExpressionWithPattern:@"[\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lo}]"
+                                                                  options:0
+                                                                  error:Nil];
+                    
+                    outputString = [NSMutableString stringWithString:
+                                    [letterMatchExpression
+                                    stringByReplacingMatchesInString:inputString
+                                    options:0
+                                    range:NSMakeRange(0, [inputString length])
+                                     withTemplate:@"😎"]];
+                    break;
+                    
+                }
                 default:
                     outputString = [NSMutableString stringWithString:@"I didn't implement that operation yet!"];
             }
