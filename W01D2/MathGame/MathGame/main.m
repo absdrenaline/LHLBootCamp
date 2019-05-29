@@ -7,28 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
-#include "AdditionQuestion.h"
-#include "InputHandler.h"
-#include "ScoreKeeper.h"
+#import "Question.h"
+#import "QuestionFactory.h"
+#import "QuestionManager.h"
+#import "ScoreKeeper.h"
+#import "InputHandler.h"
 
-static const uint kMaxInputSize = 5;
-static const uint kMinGameNumber = 10;
-static const uint kMaxGameNumber = 100;
-
+static const uint kMaxInputSize = 7;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         ScoreKeeper *scoreKeeper = [ScoreKeeper new];
+        QuestionFactory *questionFactory = [QuestionFactory new];
+        QuestionManager *questionManager = [QuestionManager new];
+        
         BOOL gameOn = YES;
         
         while (gameOn) {
             
-            AdditionQuestion* additionQuestion = [[AdditionQuestion alloc]
-                                                  initWithNumberRange:kMinGameNumber
-                                                  MaxNumber:kMaxGameNumber];
-            
-            NSLog(@"%@",[additionQuestion question]);
+            Question* question = [questionFactory generateRandomQuestion];
+            NSLog(@"%@",[question question]);
 
             InputHandler* inputHandler = [[InputHandler alloc] initWithBufferSize:kMaxInputSize];
             [inputHandler captureInputFromConsole];
@@ -38,7 +37,7 @@ int main(int argc, const char * argv[]) {
                 continue;
             }
             
-            if ([inputHandler.inputString isEqualToString: additionQuestion.answer])
+            if ([inputHandler.inputString isEqualToString: question.answer])
             {
                 NSLog(@"Right!");
                 [scoreKeeper registerWin];
@@ -47,9 +46,9 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Wrong!");
                 [scoreKeeper registerLoss];
             }
-            NSLog(@"%.1fs",additionQuestion.answerTime);
+            [questionManager.questions addObject:question];
+            NSLog(@"%@",[questionManager timeOutput]);
             NSLog(@"%@",scoreKeeper);
-            
         }
     }
     return 0;
