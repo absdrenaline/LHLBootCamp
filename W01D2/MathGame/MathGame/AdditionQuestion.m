@@ -18,6 +18,7 @@
     if (self) {
         _question = [NSString stringWithFormat:@"%d + %d ? ", firstNumber, secondNumber];
         _answer = [NSString stringWithFormat:@"%d", firstNumber + secondNumber];
+        _startTime = [NSDate date];
     }
     return self;
 }
@@ -31,6 +32,15 @@
 
 - (instancetype)init {
     return [self initWithNumberRange:0 MaxNumber:100];
+}
+
+- (NSString *)answer {
+    _endTime = [NSDate date];
+    return _answer;
+}
+
+- (NSTimeInterval)answerTime {
+   return [self.endTime timeIntervalSinceDate:self.startTime];
 }
 
 @end

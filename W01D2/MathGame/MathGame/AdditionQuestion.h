@@ -12,16 +12,28 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AdditionQuestion : NSObject
 
-@property (nonatomic) int firstNumber;
-@property (nonatomic) int secondNumber;
+
+/**
+ The time when the question was provided
+ */
+@property (nonatomic, readonly) NSDate *startTime;
+
+/**
+ The time the solution was provided
+ */
+@property (nonatomic) NSDate *endTime;
+
 @property (nonatomic, readonly) NSString *question;
-@property (nonatomic, readonly) NSString *answer;
+@property (nonatomic) NSString *answer;
 
 - (instancetype)initWithNumbers:(int) firstNumber
                   AnotherNumber:(int) secondNumber
 NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)initWithNumberRange:(int)rangeMinNumber MaxNumber:(int) rangeMaxNumber;
+- (NSString *)answer;
+- (NSTimeInterval)answerTime;
+
 
 @end
 

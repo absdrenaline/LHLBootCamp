@@ -47,6 +47,7 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Wrong!");
                 [scoreKeeper registerLoss];
             }
+            NSLog(@"%.1fs",additionQuestion.answerTime);
             NSLog(@"%@",scoreKeeper);
             
         }
