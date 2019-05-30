@@ -8,6 +8,8 @@
 
 #import "Doctor.h"
 #import "Patient.h"
+#import "Prescription.h"
+#import "MedicalRegister.h"
 
 @implementation Doctor
 
@@ -22,11 +24,19 @@
     return self;
 }
 
-- (void)visit:(Patient *) patient {
+- (BOOL)visit:(Patient *) patient {
     if ( patient.hasHealthCard ) {
-        
+        return YES;
     }
-    return;
+    return NO;
 }
 
+- (Prescription *)requestMedication:(Patient *)patient {
+    if([[patient symptoms] count]) {
+       Prescription* prescription = [[Prescription alloc]
+                                initWith:@[@"rest",@"tynelol"]];
+        return prescription;
+    }
+       return nil;
+}
 @end

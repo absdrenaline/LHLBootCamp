@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class Patient;
+@class Prescription;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString* name;
 @property NSString* specialization;
 
--(void) visit:(Patient *) patient;
+- (instancetype)initWith:(NSString*) name
+      withSpecialization:(NSString*) specialization;
+
+-(BOOL) visit:(Patient *) patient;
+-(Prescription *) requestMedication:(Patient*) patient;
 
 @end
 

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property UInt age;
 @property NSString* name;
 @property NSString* healthCard;
+@property NSSet* symptoms;
 
 - (instancetype)initWith:(NSString*) name
                  withAge:(UInt) age

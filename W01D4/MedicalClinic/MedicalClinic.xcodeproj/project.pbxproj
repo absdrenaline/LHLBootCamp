@@ -10,6 +10,8 @@
 		F43DA4EC22A0512900C4D605 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DA4EB22A0512900C4D605 /* main.m */; };
 		F43DA4F422A0518400C4D605 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DA4F322A0518400C4D605 /* Doctor.m */; };
 		F43DA4F722A0519100C4D605 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DA4F622A0519100C4D605 /* Patient.m */; };
+		F43DA4FA22A0632800C4D605 /* Prescription.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DA4F922A0632800C4D605 /* Prescription.m */; };
+		F43DA4FD22A065F100C4D605 /* MedicalRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DA4FC22A065F100C4D605 /* MedicalRegister.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		F43DA4F322A0518400C4D605 /* Doctor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		F43DA4F522A0519100C4D605 /* Patient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		F43DA4F622A0519100C4D605 /* Patient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		F43DA4F822A0632800C4D605 /* Prescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prescription.h; sourceTree = "<group>"; };
+		F43DA4F922A0632800C4D605 /* Prescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prescription.m; sourceTree = "<group>"; };
+		F43DA4FB22A065F100C4D605 /* MedicalRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicalRegister.h; sourceTree = "<group>"; };
+		F43DA4FC22A065F100C4D605 /* MedicalRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicalRegister.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +72,12 @@
 				F43DA4EB22A0512900C4D605 /* main.m */,
 				F43DA4F222A0518400C4D605 /* Doctor.h */,
 				F43DA4F322A0518400C4D605 /* Doctor.m */,
+				F43DA4F822A0632800C4D605 /* Prescription.h */,
+				F43DA4F922A0632800C4D605 /* Prescription.m */,
 				F43DA4F522A0519100C4D605 /* Patient.h */,
 				F43DA4F622A0519100C4D605 /* Patient.m */,
+				F43DA4FB22A065F100C4D605 /* MedicalRegister.h */,
+				F43DA4FC22A065F100C4D605 /* MedicalRegister.m */,
 			);
 			path = MedicalClinic;
 			sourceTree = "<group>";
@@ -129,8 +139,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43DA4F722A0519100C4D605 /* Patient.m in Sources */,
+				F43DA4FD22A065F100C4D605 /* MedicalRegister.m in Sources */,
 				F43DA4F422A0518400C4D605 /* Doctor.m in Sources */,
 				F43DA4EC22A0512900C4D605 /* main.m in Sources */,
+				F43DA4FA22A0632800C4D605 /* Prescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
