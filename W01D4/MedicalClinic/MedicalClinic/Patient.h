@@ -14,6 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property UInt age;
 @property NSString* name;
+@property NSString* healthCard;
+
+- (instancetype)initWith:(NSString*) name
+                 withAge:(UInt) age
+          withHealthCard:(NSString*) healthCard;
+
+- (BOOL) hasHealthCard;
+
 
 @end
 

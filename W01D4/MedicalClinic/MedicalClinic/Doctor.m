@@ -7,6 +7,7 @@
 //
 
 #import "Doctor.h"
+#import "Patient.h"
 
 @implementation Doctor
 
@@ -20,4 +21,12 @@
     }
     return self;
 }
+
+- (void)visit:(Patient *) patient {
+    if ( patient.hasHealthCard ) {
+        
+    }
+    return;
+}
+
 @end

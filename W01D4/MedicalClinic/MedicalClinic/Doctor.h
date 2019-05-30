@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Patient;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSString* name;
 @property NSString* specialization;
+
+-(void) visit:(Patient *) patient;
 
 @end
 
