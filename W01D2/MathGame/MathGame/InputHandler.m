@@ -8,7 +8,6 @@
 
 #import "InputHandler.h"
 
-static const UInt kDefaultBufferSize = 255;
 
 @implementation InputHandler
 
@@ -17,32 +16,26 @@ static const UInt kDefaultBufferSize = 255;
 {
     self = [super init];
     if (self) {
+            _isQuit = NO;
         _bufferSize = bufferSize;
     }
     
     return self;
 }
 
--(instancetype)init {
-    return [self initWithBufferSize:kDefaultBufferSize];
-}
-
-- (NSString *) captureInputFromConsole {
+- (void) captureInputFromConsole {
     //Capture input from the user;
     char input[_bufferSize];
     fgets(input,_bufferSize,stdin);
     
     NSString* inputString = [NSString stringWithCString:input encoding:NSUTF8StringEncoding];
-   
-    //Intialize a charset to clean out the user input
-    NSCharacterSet *trimCharacterSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-    return [inputString stringByTrimmingCharactersInSet:trimCharacterSet];
+    if ([inputString isEqualToString:@"quit"]) {
+        _isQuit = YES;
+    } else {
+        _isQuit = NO;
+        //Intialize a charset to clean out the user input
+        NSCharacterSet *trimCharacterSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+        _inputString = [inputString stringByTrimmingCharactersInSet:trimCharacterSet];
+    }
 }
-
--(void) waitOn {
-    printf("(press enter to continue)");
-    [self captureInputFromConsole];
-    printf("\n");
-}
-
 @end

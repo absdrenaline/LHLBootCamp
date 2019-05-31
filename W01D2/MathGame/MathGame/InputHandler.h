@@ -12,11 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface InputHandler : NSObject
 
+@property BOOL isQuit;
 @property uint bufferSize;
+@property (nonatomic, readonly) NSString *inputString;
 
 - (instancetype) initWithBufferSize:(uint) bufferSize;
-- (NSString *) captureInputFromConsole;
-- (void) waitOn;
+- (void) captureInputFromConsole;
+
 @end
 
 NS_ASSUME_NONNULL_END
