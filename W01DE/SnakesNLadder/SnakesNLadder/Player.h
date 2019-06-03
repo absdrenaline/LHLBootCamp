@@ -20,9 +20,11 @@ typedef enum GameEventType {
 
 @interface Player : NSObject
 
-@property NSUInteger currentSquare;
-@property NSUInteger eventSquare;
-@property NSUInteger numberOfRolls;
+@property (nonatomic, readonly) NSUInteger currentSquare;
+@property (nonatomic, readonly) NSUInteger eventSquare;
+@property (nonatomic, readonly) NSUInteger numberOfRolls;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, readonly) NSString *score;
 
 -(NSUInteger)roll;
 -(GameEvent)move:(NSUInteger) length;

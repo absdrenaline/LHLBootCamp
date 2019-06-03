@@ -8,50 +8,52 @@
 
 #import <Foundation/Foundation.h>
 #import "Player.h"
+#import "PlayerManager.h"
 #import "InputHandler.h"
 
-static NSString const *welcome = @"Let's play Snakes & Ladders --- ###\n>>> ";
-static NSString const *menu = @"Type roll (or r) to roll.\nquit (or q) to quit.\nmenu (or m) for this menu.\n>>> ";
+static NSString const *welcome = @"Let's play Snakes & Ladders --- ###\n";
+static NSString const *prompt = @">>>";
+static NSString const *menu = @"Type roll (or r) to roll.\nquit (or q) to quit.\nmenu (or m) for this menu.\n";
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Player *player = [Player new];
+        PlayerManager *playerManager = [PlayerManager new];
         InputHandler *console = [InputHandler new];
         
-        BOOL crossesFinish = NO;
+        BOOL gameOn = YES;
         
         NSLog(@"%@",welcome);
-         NSLog(@"%@",menu);
-        while(!crossesFinish) {
-           
-            NSString *input = [console captureInputFromConsole];
-            if( [input isEqualToString:@"roll"] || [input isEqualToString:@"r"]) {
-                
-                NSUInteger rollValue = [player roll];
-                NSLog(@"You rolled a %lu",rollValue);
-                
-                switch([player move:rollValue]) {
-                    case None:
-                        NSLog(@"You landed on %lu",player.currentSquare);
-                        break;
-                    case Snakes:
-                        NSLog(@"Snakes ---- You moved from %lu to  %lu",player.eventSquare,player.currentSquare);
-                        break;
-                    case Ladder:
-                        NSLog(@"Ladders ### You moved from %lu to  %lu",player.eventSquare,player.currentSquare);
-                        break;
-                    case Finish:
-                        NSLog(@"Home +++ You crossed the finishing line in %lu moves", player.numberOfRolls);
-                        crossesFinish = YES;
-                        break;
-                    default:
-                        NSLog(@"Game Error! Debug");
-                        break;
+      
+        
+        
+        while(gameOn) {
+            
+            if([playerManager playerCount] <= 0) {
+                NSLog(@"How many players will play this game? ");
+                NSString* input = [console captureInputFromConsole];
+                if ([input intValue] > 0) {
+                    [playerManager createPlayers:[input integerValue]];
+                      NSLog(@"%@",menu);
+                } else {
+                    NSLog(@"I didn't understand that. Please input a number\n");
+                    continue;
                 }
             }
+           
+            NSLog(@"%@",prompt);
+            NSString *input = [console captureInputFromConsole];
+            if( [input isEqualToString:@"roll"] || [input isEqualToString:@"r"]) {
+                [playerManager roll];
+                NSLog(@"%@",[playerManager score]);
+            }
             else if( [input isEqualToString:@"quit"] || [input isEqualToString:@"q"]) {
-                break;
+                NSLog(@"Would you like to restart instead of quitting (yes/no)? ");
+                if ([[console captureInputFromConsole] isEqualToString:@"yes"]) {
+                    [playerManager reset];
+                } else {
+                    gameOn = NO;
+                }
             }
             else if( [input isEqualToString:@"menu"] || [input isEqualToString:@"m"]) {
                 NSLog(@"%@",menu);

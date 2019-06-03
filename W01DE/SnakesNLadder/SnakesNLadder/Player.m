@@ -28,21 +28,21 @@
 }
 - (NSUInteger)roll {
     [dice roll];
-    self.numberOfRolls ++;
+    _numberOfRolls ++;
     return dice.value;
 }
 
 - (GameEvent)move:(NSUInteger) length {
     GameEvent gameEvent = None;
-    self.eventSquare = self.currentSquare + length;
+    _eventSquare = self.currentSquare + length;
     
     if( self.eventSquare > 99) {
-        self.currentSquare = 100;
+        _currentSquare = 100;
         return Finish;
     }
     
     if (gameLogic[[NSNumber numberWithUnsignedInteger:_eventSquare]]  != nil) {
-        self.currentSquare = [gameLogic[[NSNumber numberWithUnsignedInteger:_eventSquare]] unsignedIntValue];
+        _currentSquare = [gameLogic[[NSNumber numberWithUnsignedInteger:_eventSquare]] unsignedIntValue];
         if(_currentSquare > _eventSquare) {
             gameEvent = Ladder;
         }
@@ -51,9 +51,13 @@
         }
      }
     else
-        self.currentSquare = self.eventSquare;
+        _currentSquare = self.eventSquare;
     
     return gameEvent;
+}
+
+- (NSString *)score {
+    return [NSString stringWithFormat:@"%@:%2lu",self.name,self.currentSquare];
 }
 
 @end

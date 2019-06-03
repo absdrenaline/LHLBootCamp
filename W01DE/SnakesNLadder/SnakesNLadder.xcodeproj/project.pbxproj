@@ -11,6 +11,7 @@
 		F48D33E722A4643F000089DB /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = F48D33E622A4643F000089DB /* Player.m */; };
 		F48D33ED22A470D6000089DB /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = F48D33EB22A470D6000089DB /* Dice.m */; };
 		F48D33F022A475C7000089DB /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F48D33EE22A475C7000089DB /* InputHandler.m */; };
+		F48D33F322A4A3C7000089DB /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F48D33F222A4A3C7000089DB /* PlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		F48D33EC22A470D6000089DB /* Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
 		F48D33EE22A475C7000089DB /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 		F48D33EF22A475C7000089DB /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		F48D33F122A4A3C7000089DB /* PlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		F48D33F222A4A3C7000089DB /* PlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				F48D33EE22A475C7000089DB /* InputHandler.m */,
 				F48D33E522A4643F000089DB /* Player.h */,
 				F48D33E622A4643F000089DB /* Player.m */,
+				F48D33F122A4A3C7000089DB /* PlayerManager.h */,
+				F48D33F222A4A3C7000089DB /* PlayerManager.m */,
 			);
 			path = SnakesNLadder;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48D33F322A4A3C7000089DB /* PlayerManager.m in Sources */,
 				F48D33ED22A470D6000089DB /* Dice.m in Sources */,
 				F48D33E722A4643F000089DB /* Player.m in Sources */,
 				F48D33DF22A462CA000089DB /* main.m in Sources */,
