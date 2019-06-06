@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGSize viewSize = self.view.bounds.size;
+//    CGSize viewSize = self.view.bounds.size;
    
     
 //    switch( UIDevice.currentDevice.orientation) {

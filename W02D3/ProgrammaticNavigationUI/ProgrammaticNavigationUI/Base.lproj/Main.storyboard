@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w9Y-3Z-ndp">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="RoomView" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="j2T-wd-1WP">
+                                <rect key="frame" x="0.0" y="61" width="414" height="774"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front_door" translatesAutoresizingMaskIntoConstraints="NO" id="zW5-vb-OAu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="tde-wq-ysx">
+                                        <rect key="frame" x="0.0" y="387" width="414" height="387"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j2T-wd-1WP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eV9-6o-RMf"/>
+                            <constraint firstItem="j2T-wd-1WP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ixW-f3-3qi"/>
+                            <constraint firstItem="j2T-wd-1WP" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="x8E-fI-ygz"/>
+                            <constraint firstItem="j2T-wd-1WP" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="zqG-5f-jqb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Usf-Zc-qSt"/>
+                    <connections>
+                        <outlet property="containerStackView" destination="j2T-wd-1WP" id="I7a-Ez-Fff"/>
+                        <outlet property="roomImageView" destination="zW5-vb-OAu" id="9id-Eh-V0v"/>
+                        <outlet property="roomNameStackView" destination="tde-wq-ysx" id="yRj-Me-ql9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.6666666666667" y="20.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e2P-oi-3Mv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w9Y-3Z-ndp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eOf-ku-WPT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sUv-K7-Yx5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNM-ot-AKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153.62318840579712" y="665.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="front_door" width="1024" height="1024"/>
+    </resources>
+</document>
