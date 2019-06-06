@@ -12,6 +12,8 @@
 		F499CB8F22A992A000B23B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F499CB8E22A992A000B23B9C /* Assets.xcassets */; };
 		F499CB9222A992A000B23B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F499CB9022A992A000B23B9C /* LaunchScreen.storyboard */; };
 		F499CB9522A992A000B23B9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F499CB9422A992A000B23B9C /* main.m */; };
+		F499CB9E22A996B700B23B9C /* PanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F499CB9D22A996B700B23B9C /* PanViewController.m */; };
+		F499CBA122A996C700B23B9C /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F499CBA022A996C700B23B9C /* TapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		F499CB9122A992A000B23B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F499CB9322A992A000B23B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F499CB9422A992A000B23B9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F499CB9C22A996B700B23B9C /* PanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanViewController.h; sourceTree = "<group>"; };
+		F499CB9D22A996B700B23B9C /* PanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanViewController.m; sourceTree = "<group>"; };
+		F499CB9F22A996C700B23B9C /* TapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TapViewController.h; sourceTree = "<group>"; };
+		F499CBA022A996C700B23B9C /* TapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				F499CB8B22A9929F00B23B9C /* Main.storyboard */,
+				F499CB9C22A996B700B23B9C /* PanViewController.h */,
+				F499CB9D22A996B700B23B9C /* PanViewController.m */,
+				F499CB9F22A996C700B23B9C /* TapViewController.h */,
+				F499CBA022A996C700B23B9C /* TapViewController.m */,
+				F499CB9322A992A000B23B9C /* Info.plist */,
 				F499CB9B22A9934600B23B9C /* Supporting Files */,
 			);
 			path = Gestures;
@@ -68,7 +79,6 @@
 				F499CB8522A9929F00B23B9C /* AppDelegate.h */,
 				F499CB8622A9929F00B23B9C /* AppDelegate.m */,
 				F499CB9022A992A000B23B9C /* LaunchScreen.storyboard */,
-				F499CB9322A992A000B23B9C /* Info.plist */,
 				F499CB9422A992A000B23B9C /* main.m */,
 			);
 			path = "Supporting Files";
@@ -144,7 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F499CB9E22A996B700B23B9C /* PanViewController.m in Sources */,
 				F499CB9522A992A000B23B9C /* main.m in Sources */,
+				F499CBA122A996C700B23B9C /* TapViewController.m in Sources */,
 				F499CB8722A9929F00B23B9C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
