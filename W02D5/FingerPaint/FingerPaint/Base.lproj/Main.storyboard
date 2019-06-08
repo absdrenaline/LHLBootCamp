@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxL-rA-lRr" customClass="CanvasView">
+                                <rect key="frame" x="20" y="44" width="368" height="711"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="TopLeft" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PFP-Jg-XvB">
+                                <rect key="frame" x="20" y="753" width="368" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="Lgc-q7-YfQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yxL-rA-lRr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4rz-Wn-dgc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yxL-rA-lRr" secondAttribute="bottom" constant="107" id="5UE-RH-D3H"/>
+                            <constraint firstItem="PFP-Jg-XvB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GIP-0s-GWL"/>
+                            <constraint firstItem="yxL-rA-lRr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M98-VK-MX9"/>
+                            <constraint firstItem="PFP-Jg-XvB" firstAttribute="trailing" secondItem="yxL-rA-lRr" secondAttribute="trailing" id="XsP-Z7-eEI"/>
+                            <constraint firstItem="PFP-Jg-XvB" firstAttribute="leading" secondItem="yxL-rA-lRr" secondAttribute="leading" id="YXm-vh-Crq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yxL-rA-lRr" secondAttribute="trailing" constant="26" id="i7S-1L-Jba"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="canvasView" destination="yxL-rA-lRr" id="cqt-W2-7Jv"/>
+                        <outlet property="colorStack" destination="PFP-Jg-XvB" id="eAv-c1-guu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
