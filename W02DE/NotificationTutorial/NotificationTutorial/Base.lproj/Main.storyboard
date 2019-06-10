@@ -50,6 +50,43 @@
             </objects>
             <point key="canvasLocation" x="354" y="253"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="AzX-LF-oDm">
+            <objects>
+                <viewController id="TyO-cc-Dh3" customClass="ViewController3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sU9-iE-QdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-wQ-gpL">
+                                <rect key="frame" x="87" y="459" width="240" height="79"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZzU-Am-BTc">
+                                        <rect key="frame" x="8" y="24" width="224" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38592940409999998" green="0.30412493330000001" blue="0.065102697740000007" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="AJx-IF-1mg" firstAttribute="bottom" secondItem="bRA-wQ-gpL" secondAttribute="bottom" constant="275" id="7WY-gx-N81"/>
+                            <constraint firstItem="bRA-wQ-gpL" firstAttribute="centerX" secondItem="sU9-iE-QdJ" secondAttribute="centerX" id="Mud-Zv-M5Y"/>
+                            <constraint firstItem="bRA-wQ-gpL" firstAttribute="leading" secondItem="AJx-IF-1mg" secondAttribute="leading" constant="87" id="P3o-hh-U2x"/>
+                            <constraint firstItem="bRA-wQ-gpL" firstAttribute="top" secondItem="AJx-IF-1mg" secondAttribute="top" constant="415" id="ReL-HD-UZ3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AJx-IF-1mg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="8LP-gX-yc4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-sA-6aH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347.82608695652175" y="900"/>
+        </scene>
         <!--Item 1-->
         <scene sceneID="02r-70-xNs">
             <objects>
@@ -105,6 +142,7 @@
                     <connections>
                         <segue destination="YwM-Cl-QvV" kind="relationship" relationship="viewControllers" id="1sa-zT-Z8U"/>
                         <segue destination="hzu-17-xCt" kind="relationship" relationship="viewControllers" id="kCF-mb-PF7"/>
+                        <segue destination="TyO-cc-Dh3" kind="relationship" relationship="viewControllers" id="5oR-RW-IGU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJc-J2-t6G" userLabel="First Responder" sceneMemberID="firstResponder"/>

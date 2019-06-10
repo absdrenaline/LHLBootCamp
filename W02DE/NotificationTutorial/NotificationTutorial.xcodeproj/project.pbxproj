@@ -14,6 +14,7 @@
 		F40B93F522AE2135009839DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B93F422AE2135009839DD /* main.m */; };
 		F40B93FD22AE27A3009839DD /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B93FC22AE27A3009839DD /* ViewController1.m */; };
 		F40B940022AE27C1009839DD /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B93FF22AE27C1009839DD /* ViewController2.m */; };
+		F40B940322AE3589009839DD /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B940222AE3589009839DD /* ViewController3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		F40B93FC22AE27A3009839DD /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		F40B93FE22AE27C1009839DD /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		F40B93FF22AE27C1009839DD /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		F40B940122AE3589009839DD /* ViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
+		F40B940222AE3589009839DD /* ViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				F40B93FC22AE27A3009839DD /* ViewController1.m */,
 				F40B93FE22AE27C1009839DD /* ViewController2.h */,
 				F40B93FF22AE27C1009839DD /* ViewController2.m */,
+				F40B940122AE3589009839DD /* ViewController3.h */,
+				F40B940222AE3589009839DD /* ViewController3.m */,
 				F40B93E522AE2134009839DD /* AppDelegate.h */,
 				F40B93E622AE2134009839DD /* AppDelegate.m */,
 				F40B93EB22AE2134009839DD /* Main.storyboard */,
@@ -150,6 +155,7 @@
 				F40B940022AE27C1009839DD /* ViewController2.m in Sources */,
 				F40B93E722AE2134009839DD /* AppDelegate.m in Sources */,
 				F40B93FD22AE27A3009839DD /* ViewController1.m in Sources */,
+				F40B940322AE3589009839DD /* ViewController3.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
