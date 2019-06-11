@@ -75,12 +75,20 @@
 }
 
 - (void)adaptToOrientation:(CGSize)size {
-    if(size.height > size.width) {
-        self.containerStackView.axis = UILayoutConstraintAxisVertical;
-        NSLog(@"Changing orientation to landscape");
-    } else {
-        self.containerStackView.axis = UILayoutConstraintAxisHorizontal;
-        NSLog(@"Changing orientation to portrait");
+    switch( UIDevice.currentDevice.orientation) {
+        case UIDeviceOrientationPortrait:
+        case UIDeviceOrientationPortraitUpsideDown:
+            self.containerStackView.axis = UILayoutConstraintAxisVertical;
+            NSLog(@"Potraits");
+            break;
+        case UIDeviceOrientationLandscapeLeft:
+        case UIDeviceOrientationLandscapeRight:
+            self.containerStackView.axis = UILayoutConstraintAxisHorizontal;
+            NSLog(@"Landscapes");
+            break;
+        default:
+            break;
+            
     }
 }
 
