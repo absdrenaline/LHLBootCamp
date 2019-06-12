@@ -17,11 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSNotificationCenter *defaultNC = [NSNotificationCenter defaultCenter];
-    [defaultNC addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [defaultNC addObserver:self selector:@selector(keyboardChanged:) name:UIKeyboardWillChangeFrameNotification object:nil];
     _oldConstraint = _bottomConstraint.constant;
 }
 
-- (void) keyboardDidShow:(NSNotification*) notification {
+- (void) keyboardChanged:(NSNotification*) notification {
     NSValue* value= notification.userInfo[UIKeyboardFrameEndUserInfoKey];
     CGRect keyRect = value.CGRectValue;
 
@@ -30,7 +30,7 @@
     if(yPos >= mainViewHeight) {
         self.bottomConstraint.constant = _oldConstraint;
     } else {
-        self.bottomConstraint.constant = yPos - mainViewHeight;
+        self.bottomConstraint.constant = mainViewHeight -yPos;
     }
     [self.view layoutSubviews];
 }
