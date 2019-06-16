@@ -1,0 +1,2 @@
+#Specific system files that are not to be included here
+.DS_Store
