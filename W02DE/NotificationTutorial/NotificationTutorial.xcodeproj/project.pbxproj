@@ -15,6 +15,8 @@
 		F40B93FD22AE27A3009839DD /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B93FC22AE27A3009839DD /* ViewController1.m */; };
 		F40B940022AE27C1009839DD /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B93FF22AE27C1009839DD /* ViewController2.m */; };
 		F40B940322AE3589009839DD /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B940222AE3589009839DD /* ViewController3.m */; };
+		F415F22B22B6C6FE002D4881 /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = F415F22A22B6C6FE002D4881 /* ViewController4.m */; };
+		F415F22E22B6C786002D4881 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F415F22D22B6C786002D4881 /* CustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		F40B93FF22AE27C1009839DD /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		F40B940122AE3589009839DD /* ViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		F40B940222AE3589009839DD /* ViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		F415F22922B6C6FE002D4881 /* ViewController4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
+		F415F22A22B6C6FE002D4881 /* ViewController4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
+		F415F22C22B6C786002D4881 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		F415F22D22B6C786002D4881 /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,10 @@
 				F40B93E522AE2134009839DD /* AppDelegate.h */,
 				F40B93E622AE2134009839DD /* AppDelegate.m */,
 				F40B93EB22AE2134009839DD /* Main.storyboard */,
+				F415F22C22B6C786002D4881 /* CustomView.h */,
+				F415F22D22B6C786002D4881 /* CustomView.m */,
+				F415F22922B6C6FE002D4881 /* ViewController4.h */,
+				F415F22A22B6C6FE002D4881 /* ViewController4.m */,
 				F40B93EE22AE2135009839DD /* Assets.xcassets */,
 				F40B93F022AE2135009839DD /* LaunchScreen.storyboard */,
 				F40B93F322AE2135009839DD /* Info.plist */,
@@ -155,7 +165,9 @@
 				F40B940022AE27C1009839DD /* ViewController2.m in Sources */,
 				F40B93E722AE2134009839DD /* AppDelegate.m in Sources */,
 				F40B93FD22AE27A3009839DD /* ViewController1.m in Sources */,
+				F415F22E22B6C786002D4881 /* CustomView.m in Sources */,
 				F40B940322AE3589009839DD /* ViewController3.m in Sources */,
+				F415F22B22B6C6FE002D4881 /* ViewController4.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
