@@ -22,6 +22,7 @@ static NSString *const kYelpKey = @"";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    cafes = [NSMutableArray new];
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     [locationManager requestWhenInUseAuthorization];
@@ -49,10 +50,13 @@ static NSString *const kYelpKey = @"";
     for(NSDictionary *business in results) {
         Cafe *cafe = [[Cafe alloc] initWithIdentifier:business[@"id"]];
         cafe.title = business[@"name"];
-        cafe.latitude = business[@"coordinates"][@"latitude"];
-        cafe.longitude = business[@"coordinates"][@"longitude"];
+        NSNumber *latitude = business[@"coordinates"][@"latitude"];
+        NSNumber *longitude = business[@"coordinates"][@"longitude"];
+        cafe.coordinate = CLLocationCoordinate2DMake([latitude doubleValue], [longitude doubleValue]);
         [cafes addObject:cafe];
     }
+    [self.mapView addAnnotations:cafes];
+    [self.mapView showAnnotations:cafes animated:YES];
 }
 
 @end
