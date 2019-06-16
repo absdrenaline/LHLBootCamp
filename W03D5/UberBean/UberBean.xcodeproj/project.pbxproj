@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4C4ADC822B5F58A006B3668 /* YelpAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C4ADC722B5F58A006B3668 /* YelpAPI.m */; };
+		F4C4ADCB22B60609006B3668 /* Cafe.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C4ADCA22B60609006B3668 /* Cafe.m */; };
 		F4E96CDA22B45C0A0045E947 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E96CD922B45C0A0045E947 /* AppDelegate.m */; };
 		F4E96CDD22B45C0A0045E947 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E96CDC22B45C0A0045E947 /* ViewController.m */; };
 		F4E96CE022B45C0A0045E947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E96CDE22B45C0A0045E947 /* Main.storyboard */; };
 		F4E96CE222B45C0A0045E947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E96CE122B45C0A0045E947 /* Assets.xcassets */; };
 		F4E96CE522B45C0A0045E947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E96CE322B45C0A0045E947 /* LaunchScreen.storyboard */; };
 		F4E96CE822B45C0A0045E947 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E96CE722B45C0A0045E947 /* main.m */; };
+		F4E96CF022B5EC1C0045E947 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E96CEF22B5EC1C0045E947 /* NetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4C4ADC622B5F58A006B3668 /* YelpAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YelpAPI.h; sourceTree = "<group>"; };
+		F4C4ADC722B5F58A006B3668 /* YelpAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YelpAPI.m; sourceTree = "<group>"; };
+		F4C4ADC922B60609006B3668 /* Cafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cafe.h; sourceTree = "<group>"; };
+		F4C4ADCA22B60609006B3668 /* Cafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cafe.m; sourceTree = "<group>"; };
 		F4E96CD522B45C0A0045E947 /* UberBean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberBean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E96CD822B45C0A0045E947 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4E96CD922B45C0A0045E947 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +33,8 @@
 		F4E96CE422B45C0A0045E947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4E96CE622B45C0A0045E947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4E96CE722B45C0A0045E947 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4E96CEE22B5EC1B0045E947 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		F4E96CEF22B5EC1C0045E947 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,12 @@
 				F4E96CDB22B45C0A0045E947 /* ViewController.h */,
 				F4E96CDC22B45C0A0045E947 /* ViewController.m */,
 				F4E96CDE22B45C0A0045E947 /* Main.storyboard */,
+				F4E96CEE22B5EC1B0045E947 /* NetworkManager.h */,
+				F4E96CEF22B5EC1C0045E947 /* NetworkManager.m */,
+				F4C4ADC622B5F58A006B3668 /* YelpAPI.h */,
+				F4C4ADC722B5F58A006B3668 /* YelpAPI.m */,
+				F4C4ADC922B60609006B3668 /* Cafe.h */,
+				F4C4ADCA22B60609006B3668 /* Cafe.m */,
 				F4E96CE122B45C0A0045E947 /* Assets.xcassets */,
 				F4E96CE322B45C0A0045E947 /* LaunchScreen.storyboard */,
 				F4E96CE622B45C0A0045E947 /* Info.plist */,
@@ -141,9 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E96CF022B5EC1C0045E947 /* NetworkManager.m in Sources */,
 				F4E96CDD22B45C0A0045E947 /* ViewController.m in Sources */,
 				F4E96CE822B45C0A0045E947 /* main.m in Sources */,
 				F4E96CDA22B45C0A0045E947 /* AppDelegate.m in Sources */,
+				F4C4ADCB22B60609006B3668 /* Cafe.m in Sources */,
+				F4C4ADC822B5F58A006B3668 /* YelpAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
