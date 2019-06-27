@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pF0-ee-y75">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="97O-GG-ChR">
+            <objects>
+                <viewController id="pF0-ee-y75" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ZJ-jc-lCR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TQ1-EA-nvl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7PG-xm-ErT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.60000000000002" y="-151.57421289355324"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="wM1-Uu-SFx">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="obn-8R-dc7" customClass="SearchViewController" customModule="UberBean" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zEd-Xt-DTf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QXj-Hy-H5E">
+                                <rect key="frame" x="16" y="310" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtk-Qd-5Qj">
+                                <rect key="frame" x="16" y="348" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="G9N-73-gLt"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="userCancelled:" destination="obn-8R-dc7" eventType="touchUpInside" id="sNL-Ln-rNw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMb-Nm-imB">
+                                <rect key="frame" x="311" y="348" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="aLx-hQ-Kdv"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="userDidSearch:" destination="obn-8R-dc7" eventType="touchUpInside" id="fsU-sy-6GK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MMb-Nm-imB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dtk-Qd-5Qj" secondAttribute="trailing" constant="8" symbolic="YES" id="7I8-HE-iW4"/>
+                            <constraint firstItem="Oz2-K6-y0J" firstAttribute="trailing" secondItem="MMb-Nm-imB" secondAttribute="trailing" constant="16" id="AsQ-TL-FSw"/>
+                            <constraint firstItem="dtk-Qd-5Qj" firstAttribute="leading" secondItem="Oz2-K6-y0J" secondAttribute="leading" constant="16" id="JhB-fJ-piC"/>
+                            <constraint firstItem="dtk-Qd-5Qj" firstAttribute="top" secondItem="QXj-Hy-H5E" secondAttribute="bottom" constant="8" id="LE2-72-pe0"/>
+                            <constraint firstItem="QXj-Hy-H5E" firstAttribute="top" secondItem="Oz2-K6-y0J" secondAttribute="top" constant="290" id="NAm-ei-Oes"/>
+                            <constraint firstItem="QXj-Hy-H5E" firstAttribute="leading" secondItem="Oz2-K6-y0J" secondAttribute="leading" constant="16" id="QDz-bi-Wou"/>
+                            <constraint firstItem="Oz2-K6-y0J" firstAttribute="trailing" secondItem="QXj-Hy-H5E" secondAttribute="trailing" constant="16" id="SiA-Od-u8e"/>
+                            <constraint firstItem="MMb-Nm-imB" firstAttribute="top" secondItem="QXj-Hy-H5E" secondAttribute="bottom" constant="8" id="n5r-VF-RlM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oz2-K6-y0J"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="QXj-Hy-H5E" id="X6u-wo-ztr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p05-od-60p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285.5999999999999" y="-152.47376311844079"/>
+        </scene>
+    </scenes>
+</document>
