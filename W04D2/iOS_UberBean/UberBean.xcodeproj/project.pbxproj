@@ -15,6 +15,7 @@
 		22749E971FD5F07E009B1F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22749E911FD5F07E009B1F2D /* Assets.xcassets */; };
 		22749E981FD5F07E009B1F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22749E921FD5F07E009B1F2D /* Main.storyboard */; };
 		F426AA6822C4679900CA99CF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426AA6722C4679900CA99CF /* SearchViewController.swift */; };
+		F426AA6A22C47CC100CA99CF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426AA6922C47CC100CA99CF /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D2A5F2001F4A9144005CD714 /* UberBean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberBean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F426AA6622C4679900CA99CF /* UberBean-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UberBean-Bridging-Header.h"; sourceTree = "<group>"; };
 		F426AA6722C4679900CA99CF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F426AA6922C47CC100CA99CF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				2258A080202519C500DDB477 /* main.m */,
 				F426AA6722C4679900CA99CF /* SearchViewController.swift */,
 				F426AA6622C4679900CA99CF /* UberBean-Bridging-Header.h */,
+				F426AA6922C47CC100CA99CF /* NetworkManager.swift */,
 			);
 			path = UberBean;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F426AA6A22C47CC100CA99CF /* NetworkManager.swift in Sources */,
 				F426AA6822C4679900CA99CF /* SearchViewController.swift in Sources */,
 				2258A081202519C500DDB477 /* main.m in Sources */,
 				2258A08420251A9500DDB477 /* Cafe.m in Sources */,
