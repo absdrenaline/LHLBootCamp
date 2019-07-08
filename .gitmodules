@@ -4,3 +4,6 @@
 [submodule "W06D4/iOS-Pokemon"]
 	path = W06D4/iOS-Pokemon
 	url = https://github.com/absdrenaline/iOS-Pokemon
+[submodule "W06D5/W6D5-Assignment-Starter-Project"]
+	path = W06D5/W6D5-Assignment-Starter-Project
+	url = https://github.com/absdrenaline/W6D5-Assignment-Starter-Project.git
