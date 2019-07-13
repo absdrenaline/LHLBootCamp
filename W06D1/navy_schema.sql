@@ -1,0 +1,35 @@
+CREATE TABLE Fleets (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL
+);
+
+CREATE TABLE Ships (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fleet_id INTEGER NOT NULL,
+    name TEXT NOT NULL ,
+    date_built INTEGER,
+    FOREIGN KEY(fleet_id) REFERENCES Fleets(id)
+);
+
+CREATE TABLE Sailors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    date_of_birth INTEGER NOT NULL
+);
+
+CREATE TABLE ToursOfDuty (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ship_id INTEGER NOT NULL,
+    start_date INTEGER NOT NULL,
+    end_date INTEGER NOT NULL,
+    FOREIGN KEY( ship_id) REFERENCES Ships(id)
+);
+
+CREATE TABLE Duties (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ship_id INTEGER NOT NULL,
+    sailor_id INTEGER NULL,
+    rank,
+    FOREIGN KEY(ship_id) REFERENCES Ships(id)
+    FOREIGN KEY(sailor_id) REFERENCES Sailors(id)
+);
